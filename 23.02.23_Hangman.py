@@ -9,7 +9,7 @@ main_word_list = [
 ]
 
 #random word and empty blanks
-random_word = main_word_list[random.randint(0, 7)]
+random_word = main_word_list[random.randint(0, 8)]
 
 main_word_letters = list(random_word)
 
@@ -21,25 +21,22 @@ for empty in range(len_random_word):
 
 while program == 1:
     program = 0
-    command = 'clear'
+    command = 'cls'
+    count = -1
 
     for i in empty_list:
         print(i, end=" ")
 
-    #ask player, check the blanks
+    #ask player, check the blanks and replace
 
     p_letter = input("\n\nGuess a letter: ").upper()
 
-    count = -1
     for letter in random_word:
         count += 1
-        if empty_list[count] == letter:  #################################?????????
-            input("\n\nYou typed the same letter as before!")
-            break
-        else:
-            if p_letter == letter:
-                empty_list.remove(empty_list[count])
-                empty_list.insert(count, p_letter)
+        if p_letter == letter:
+            empty_list.remove(empty_list[count])
+            empty_list.insert(count, p_letter)
+            #?????????????
 
     os.system(command)
     program += 1
