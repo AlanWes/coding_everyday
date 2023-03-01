@@ -34,9 +34,7 @@ while program == 1:
     for letter in random_word:
         count += 1
         if p_letter == letter:
-            empty_list.remove(empty_list[count])
-            empty_list.insert(count, p_letter)
-            #?????????????
+            empty_list[count] = main_word_letters[count]
 
     os.system(command)
     program += 1
