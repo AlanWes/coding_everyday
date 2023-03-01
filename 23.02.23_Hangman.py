@@ -2,6 +2,7 @@ import random
 import os
 
 program = 1
+hp = 6
 
 main_word_list = [
     'FULLMETALALCHEMIST', 'DEATHNOTE', 'COWBOYBEPOP', 'SPIRITEDAWAY',
@@ -24,6 +25,71 @@ while program == 1:
     command = 'cls'
     count = -1
 
+    if hp == 6:
+        print('''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+''')
+    elif hp == 5:
+        print('''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+''')
+    elif hp == 4:
+        print('''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+''')
+    elif hp == 3:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+''')
+    elif hp == 2:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+''')
+    elif hp == 1:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+''')
+    elif hp == 0:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+''')
+
+
     for i in empty_list:
         print(i, end=" ")
 
@@ -35,6 +101,8 @@ while program == 1:
         count += 1
         if p_letter == letter:
             empty_list[count] = main_word_letters[count]
+
+    hp -= 1
 
     os.system(command)
     program += 1
