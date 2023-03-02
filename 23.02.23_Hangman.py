@@ -102,7 +102,14 @@ while program == 1:
         if p_letter == letter:
             empty_list[count] = main_word_letters[count]
 
-    hp -= 1
+    if p_letter not in empty_list:
+        print(f"\n{p_letter} is not in the main word!")
+        hp -= 1
+        if hp == 0:
+            print("You loose!")
+            break
+        input(f"\nClick ENTER to continue, you have left {hp} hp.")
+
 
     os.system(command)
     program += 1
