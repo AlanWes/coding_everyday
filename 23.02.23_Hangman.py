@@ -89,6 +89,9 @@ while program == 1:
       |
 ''')
 
+    if "_" not in empty_list:
+        print(f"\nYou are genius, main word is {random_word}. You win! :)")
+        break
 
     for i in empty_list:
         print(i, end=" ")
@@ -106,7 +109,7 @@ while program == 1:
         print(f"\n{p_letter} is not in the main word!")
         hp -= 1
         if hp == 0:
-            print("You loose!")
+            print(f"You loose! Main word is {p_letter}")
             break
         input(f"\nClick ENTER to continue, you have left {hp} hp.")
 
