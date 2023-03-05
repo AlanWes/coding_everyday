@@ -3,18 +3,27 @@
 # Write 3 print statements inside the function.
 # Call the greet() function and run your code.
 
-def greet(x = "angela"):
-    print(f"first lane {x}")
-    print("second lane")
-    print(f"third lane {x}") 
+# def greet(x = "Bob"):
+#     print(f"first lane {x}")
+#     print("second lane")
+#     print(f"third lane {x}") 
 
-greet()
+# greet()
 
-# another variation
+# another variation that allows for input
 
-def greet(x):
-    print(f"first lane {x}")
-    print("second lane")
-    print(f"third lane {x}") 
+# def greet(x):
+#     print(f"first lane {x}")
+#     print("second lane")
+#     print(f"third lane {x}") 
 
-greet("angela")
+# greet("Bob")
+
+#Function with more than on input
+
+# def greet(x, y, z):
+#     print(f"first lane {x}")
+#     print(f"second lane {y}")
+#     print(f"third lane {z}")
+
+# greet("Bob", "Henry", "Steve")
