@@ -2,6 +2,7 @@ import random
 import os
 
 program = 1
+hp = 6
 
 main_word_list = [
     'FULLMETALALCHEMIST', 'DEATHNOTE', 'COWBOYBEPOP', 'SPIRITEDAWAY',
@@ -24,6 +25,74 @@ while program == 1:
     command = 'cls'
     count = -1
 
+    if hp == 6:
+        print('''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+''')
+    elif hp == 5:
+        print('''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+''')
+    elif hp == 4:
+        print('''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+''')
+    elif hp == 3:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+''')
+    elif hp == 2:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+''')
+    elif hp == 1:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+''')
+    elif hp == 0:
+        print('''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+''')
+
+    if "_" not in empty_list:
+        print(f"\nYou are genius, main word is {random_word}. You win! :)")
+        break
+
     for i in empty_list:
         print(i, end=" ")
 
@@ -34,9 +103,16 @@ while program == 1:
     for letter in random_word:
         count += 1
         if p_letter == letter:
-            empty_list.remove(empty_list[count])
-            empty_list.insert(count, p_letter)
-            #?????????????
+            empty_list[count] = main_word_letters[count]
+
+    if p_letter not in empty_list:
+        print(f"\n{p_letter} is not in the main word!")
+        hp -= 1
+        if hp == 0:
+            print(f"You loose! Main word is {p_letter}")
+            break
+        input(f"\nClick ENTER to continue, you have left {hp} hp.")
+
 
     os.system(command)
     program += 1
