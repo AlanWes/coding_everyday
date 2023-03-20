@@ -1,7 +1,8 @@
+import math
+
 def paint_calc(height, width, cover):
-    cans = (height * width) / cover
-    cans_result = round(cans)
-    print(f"You'll need {cans_result} cans of paint.")
+    cans = math.ceil((height * width) / cover)
+    print(f"You'll need {cans} cans of paint.")
 
 test_h = int(input("Height of wall: "))
 test_w = int(input("Width of wall: "))
