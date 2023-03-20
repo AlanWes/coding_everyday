@@ -27,3 +27,11 @@
 #     print(f"third lane {z}")
 
 # greet("Bob", "Henry", "Steve")
+
+x = input("Tell me your name: ")
+y = input("Tell me where you live: ")
+
+def greet():
+    print(f"Welcome {x} from {y}")
+
+greet()
